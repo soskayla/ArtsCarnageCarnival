@@ -146,7 +146,7 @@ function submitLockWord() {
     alert(
       "Congrats you made it...Head to the next room if you still want a chance to save Eric."
     );
-    window.location.href = "https://lcdff3.csb.app/";
+    window.location.href = "https://tianaagbekoh.github.io/JokerCardESCAPEROOM/";
   } else {
     alert(
       "Uh oh! You've been caught! The page will be restarted if you wish to save Eric."
@@ -177,3 +177,4 @@ function endGame() {
   );
   location.reload();
 }
+
