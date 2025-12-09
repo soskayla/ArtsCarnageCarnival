@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arts Funhouse</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="filter"></div>
+    <div class="bg"></div>
+
+    <div class="row">
+      <div class="timer-container">
+        <img src="images/blackrec.webp" class="timer" />
+        <span id="countdown">100</span>
+      </div>
+
+      <div class="center-content" style="flex: 1; display: flex; gap: 20px; justify-content: center;">
+        <img src="images/lock2.png" id="lockButton" class="button icon"
+             onclick="showModal('modal_lock')" />
+        <img src="images/Hint1.png" id="hint" class="button icon" onclick="openHint()" />
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="box1">
+        <img
+          src="images/purpleballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'balloon9')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/blackballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'modal_f')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/whiteballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'modal_u')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/blueballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'balloon9')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/purpleballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'balloon9')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/whiteballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'modal_n')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/blueballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'balloon9')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/blackballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'modal_h')"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="box1">
+        <img
+          src="images/blueballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'balloon9')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/whiteballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'modal_o')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/blueballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'balloon9')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/blackballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'modal_u2')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/whiteballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'modal_s')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/purpleballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'balloon9')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/blueballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'balloon9')"
+        />
+      </div>
+      <div class="box1">
+        <img
+          src="images/blackballoon.png"
+          class="balloon button"
+          onclick="popBalloon(this, 'modal_e')"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+    
+      <div class="box2">
+        <img src="images/backpack.png" class="icon" onclick="showInventory()" />
+       
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="modal_f">
+      <div class="modal-body">
+        <span class="close" onclick="hideModal('modal_f')">&times;</span>
+        <img src="images/F.png" />
+      </div>
+    </div>
+
+    <div class="modal" id="modal_u">
+      <div class="modal-body">
+        <span class="close" onclick="hideModal('modal_u')">&times;</span>
+        <img src="images/u.png" />
+      </div>
+    </div>
+
+    <div class="modal" id="modal_n">
+      <div class="modal-body">
+        <span class="close" onclick="hideModal('modal_n')">&times;</span>
+        <img src="images/n.png" />
+      </div>
+    </div>
+
+    <div class="modal" id="modal_h">
+      <div class="modal-body">
+        <span class="close" onclick="hideModal('modal_h')">&times;</span>
+        <img src="images/h.png" />
+      </div>
+    </div>
+
+    <div class="modal" id="modal_o">
+      <div class="modal-body">
+        <span class="close" onclick="hideModal('modal_o')">&times;</span>
+        <img src="images/o.png" />
+      </div>
+    </div>
+
+    <div class="modal" id="modal_u2">
+      <div class="modal-body">
+        <span class="close" onclick="hideModal('modal_u2')">&times;</span>
+        <img src="images/u.png" />
+      </div>
+    </div>
+
+    <div class="modal" id="modal_s">
+      <div class="modal-body">
+        <span class="close" onclick="hideModal('modal_s')">&times;</span>
+        <img src="images/s.png" />
+      </div>
+    </div>
+
+    <div class="modal" id="modal_e">
+      <div class="modal-body">
+        <span class="close" onclick="hideModal('modal_e')">&times;</span>
+        <img src="images/e.png" />
+      </div>
+    </div>
+
+    <div class="modal1" id="modal_instructions">
+      <div class="modal-body">
+        <span class="close3" onclick="hideModal('modal_instructions')"
+          >&times;</span
+        >
+        <img src="images/Art2.png" />
+        <img src="images/texttt.png" />
+      </div>
+    </div>
+
+    <div class="modal" id="modal_lock">
+      <div class="modal-box">
+        <span class="close" onclick="hideModal('modal_lock')">&times;</span>
+        <input
+          id="lockInput"
+          type="text"
+          placeholder="Enter word"
+          class="lock-input" 
+          autocomplete="off"
+        />
+        <button id="lockSubmit" onclick="submitLockWord()">Submit</button>
+        <p id="lockMessage"></p>
+      </div>
+    </div>
+
+    <div class="modal center-content" id="artModal">
+      <div class="modal-content">
+        <span class="close7" onclick="hideInventory()">&times;</span>
+        <div class="art-modal">
+          <div class="column black">
+            <div class="box4">
+              <img src="images/paper.png" class="contain-image" />
+            </div>
+            <div class="box4 white"></div>
+          </div>
+          <div class="column black">
+            <div class="box4 white"></div>
+            <div class="box4"></div>
+          </div>
+        </div>
+      </div>
+ 
+        </div>
+      </div>
+    </div>
+
+    <div id="hintModal" class="modal6">
+      <span class="close5" onclick="closeHint()">&times;</span>
+      <div class="hint-box">
+        <img src="images/Hintwords.png" class="hint-img">
+
+    <script src="script.js"></script>
+    <audio id="popSound" src="sounds/balloonpop1.mp3"></audio>
+    <audio id="bgMusic" src="sounds/backgroundmusic.mp3" loop></audio>
+  </body>
+</html>

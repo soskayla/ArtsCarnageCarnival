@@ -1,0 +1,393 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background-image: url("images/backy.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.row {
+  height: 25%;
+  width: 100%;
+  display: flex;
+}
+
+.box1 {
+  height: 100%;
+  width: 12.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  height: 100%;
+  width: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.box3 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.box4 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+}
+
+#modal_instructions .modal-body {
+  background: black;
+  color: white;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.balloon {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.balloon1 {
+  display: flex;
+}
+
+.timer {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.timer-container {
+  position: relative;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#countdown {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+  user-select: none;
+  pointer-events: none;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button:active {
+  transform: scale(1.05);
+}
+
+.lock {
+  width: 13%;
+  height: auto;
+  cursor: pointer;
+  display: block;
+  margin-left: 20px;
+  position: fixed;
+  top: 15px;
+  right: 100px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.95;
+}
+
+.modal1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 60px;
+  right: 675px;
+  font-size: 48px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  z-index: 1010;
+  user-select: none;
+}
+
+.close3 {
+  position: absolute;
+  top: 4px;
+  left: 825px;
+  font-size: 48px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  z-index: 1010;
+  user-select: none;
+}
+
+.close4 {
+  position: absolute;
+  top: 10px;
+  left: 80%;
+  font-size: 48px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  z-index: 1010;
+  user-select: none;
+}
+
+.close7 {
+  position: absolute;
+  top: 10px;
+  left: 90%;
+  font-size: 48px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  z-index: 1010;
+  user-select: none;
+}
+
+.close5 {
+  position: absolute;
+  top: 10px;
+  left: 80%;
+  font-size: 48px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  z-index: 1010;
+  user-select: none;
+}
+
+#artModal .modal-content {
+  position: relative;
+  width: 40%;
+  height: 80%;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  opacity: 1;
+}
+
+.art-modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0.95;
+}
+
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#artModal {
+  display: none;
+}
+
+.Art {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -300px;
+  right: 375px;
+  width: 600px;
+  height: 600px;
+}
+
+.textbox {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  bottom: -350px;
+  right: -900px;
+  width: auto;
+  height: auto;
+}
+
+.balloon {
+  max-height: 200px;
+  cursor: pointer;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  width: auto;
+}
+
+.icon {
+  width: 15%;
+  height: auto;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+
+trap {
+  width: 13%;
+  height: auto;
+}
+
+.contain-image {
+  max-height: 70%;
+  max-width: 70%;
+}
+
+.img {
+  width: 40%;
+  height: auto;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+}
+
+.column {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-box {
+  background: black;
+  padding: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lock-input {
+  width: 90%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#lockSubmit {
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#lockMessage {
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.modal6 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.hint-box {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hint-img {
+  width: 60%;
+  height: auto;
+}
+
+.close6 {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.light-grey {
+  background-color: #a9a9a9;
+}
+.dark-grey {
+  background-color: #707070;
+}
+.black {
+  background-color: black;
+}
+.blood {
+  background-color: #2f0000;
+}
+.white {
+  background-color: #ffffff;
+}
